@@ -107,11 +107,22 @@
 # uncompletedname = ['ss', 'xmh', 'scy', 'tht']
 # showname(uncompletedname)
 # showname((un_printname(uncompletedname[:])))
-def person_infor(xm, nn, **other):
-    person_resume = {}
-    person_resume['name'] = xm
-    person_resume['sex'] = nn
-    for (key, value) in other.items():
-        person_resume['key'] = value
+# def person_infor(xm, nn, **other):
+#     person_resume = {}
+#     person_resume['name'] = xm
+#     person_resume['sex'] = nn
+#     for (key, value) in other.items():
+#         person_resume['key'] = value
+#
+#     return person_resume
+class Dog():
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
 
-    return person_resume
+    def sit(self):
+        print(self.name.lower() + " is now sitting!")
+
+    def roll(self):
+        print(self.name.title() + " is now rolling!")
+
