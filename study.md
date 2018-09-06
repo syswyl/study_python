@@ -19,7 +19,7 @@
 + 简单的统计：max，min，sum
 + 通过列表解析创建列表: 与for循环合并
 > squares = [value**2 for value in range(1,11)]
-> squares = [1,4,9,16,25,36,49,64,81,100] 
+> squares = [1,4,9,16,25,36,49,64,81,100]
 
 + 使用列表的部分: list[1:4]/[:4]/[1:] （记得负数索引是从列表末尾开始向前计数，所以[-3:]也正确
 + 使用列表的全部： list[:],只用：省略范围
@@ -62,24 +62,25 @@
 
 + 列表字典： （将列表存储到字典中）
 
-> alien : {"color" : "red" , "interest" :<font color = "red">["football", "sing" , "dance"]</font> , }
+> alien:{"color" : "red" , "interest" :<font color = "red">["football", "sing" , "dance"]</font>,}
 
 + 字典中存储字典:
-
-> users = {
-'ss' : {
-'first' : "shuang",
-'last' : "song",
-'local' : "shuifu",
-},
-'zyh' : {
-'first' : "yuehang",
-'last' : "zhang",
-'local' : "yunnan",
-},    
+```
+ users = {
+            'ss' : {
+                'first' : "shuang",
+                'last' : "song",
+                'local' : "shuifu",
+                },
+            'zyh' : {
+                'first' : "yuehang",
+                'last' : "zhang",
+                'local' : "yunnan",
+                },
 }
+```
 
-<font color = "Red">注意：</font>尽量在每位用户的字典结构都保持相同，这样使得字典结构化较强，嵌套处理更容易（虽然python并没有特殊要求）
++ <font color = "Red">注意：</font>尽量在每位用户的字典结构都保持相同，这样使得字典结构化较强，嵌套处理更容易（虽然python并没有特殊要求）
 
 ## 函数学习
 
@@ -113,8 +114,9 @@
 ### 2.模块学习
 
 + import 导入整个模块
+
 假设有两个.py文件，一个名字为 main.py，另一个为 function.py，显然在function.py中即为各种函数的具体实现，在main.py中我们只需要使用:
-> import function ，既可以使用function.py中的所有函数（两个文件在同一位置下）,使用之前需要加上function.funcion_name
+import function ，既可以使用function.py中的所有函数（两个文件在同一位置下）,使用之前需要加上function.funcion_name
 
 + import导入模块的几种方法
 > 1.from module_name import function_name
@@ -127,7 +129,26 @@
 ## 面向对象
 
 ### 1.创建和使用类
+
 + 约定，首字母大写为类，类中的函数成为方法
-+ 使用def _ init _ (self, form_par1, form_par2)，<font color  = 'red'>注意self必须在第一个位置</font>
-> python 调用_ init _ 方法创建实例时候，将自动传入实参self，每个与类关联的方法的调用都自动传递实参self，是一个指向实例本身的引用，让实例能够访问类中的属性和方法
-+ 向类传递实参时候，只需要向类中的form_par提供是实参就可以
++ 使用`def _init_ (self, form_par1, form_par2)`，<font color  = 'red'>注意self必须在第一个位置</font>
+> python 调用_init_ 方法创建实例时候，将自动传入实参self，每个与类关联的方法的调用都自动传递实参self，是一个指向实例本身的引用，让实例能够访问类中的属性和方法
++ 向类传递实参时候，只需要向类中的form_par提供实参就可以
+
+### 2.继承
+
++ 自动获得所继承的类的所有属性和方法，称为子类，还可以继续定义自己的属性和方法
+> 创建子类时，父类必须和子类在同一文件，且在子类的前面，
++ 一个实例
+
+```
+#父类 :
+        class Car:
+            def _init_(self, name,year:
+                    self.name = name
+                    self.year = year
+#子类 :
+        class ecar(Car):
+            def _init_(self, name,year:
+                    super()._ init _(name,year)'
+```

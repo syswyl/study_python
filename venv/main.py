@@ -1,6 +1,19 @@
-from first_pra import Dog
-my_dog = Dog("xiaozi", 6)
-print("my dog's age is " + str(my_dog.age))
-my_dog.sit()
-my_dog.roll()
-print(my_dog.__dict__)
+from first_pra import *
+# my_dog = Dog("xiaozi", 6)
+# print("my dog's age is " + str(my_dog.age))
+# my_dog.sit()
+# my_dog.roll()
+# print(my_dog.__dict__)
+my_car = Car("audi", "ss", 2018)
+print(my_car.full_information())
+my_car.meter = 100
+my_car.get_meter()
+my_car.modify_meter(50)
+print("after modifying the meter")
+print(my_car.__dict__)
+my_ecar = ElectricCar("tesla", "ss", 2019)
+print('the information of my electric car is : ')
+print(my_ecar.__dict__)
+
+
+
