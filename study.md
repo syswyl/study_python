@@ -67,16 +67,16 @@
 + 字典中存储字典:
 
 > users = {
-    'ss' : {
-       'first' : "shuang",
-       'last' : "song",
-       'local' : "shuifu",
-    },
-   'zyh' : {
-        'first' : "yuehang",
-        'last' : "zhang",
-        'local' : "yunnan",
-    },    
+'ss' : {
+'first' : "shuang",
+'last' : "song",
+'local' : "shuifu",
+},
+'zyh' : {
+'first' : "yuehang",
+'last' : "zhang",
+'local' : "yunnan",
+},    
 }
 
 <font color = "Red">注意：</font>尽量在每位用户的字典结构都保持相同，这样使得字典结构化较强，嵌套处理更容易（虽然python并没有特殊要求）
@@ -114,4 +114,16 @@
 
 + import 导入整个模块
 假设有两个.py文件，一个名字为 main.py，另一个为 function.py，显然在function.py中即为各种函数的具体实现，在main.py中我们只需要使用:
-> import function ，既可以使用function.py中的所有函数（两个文件在同一位置下）
+> import function ，既可以使用function.py中的所有函数（两个文件在同一位置下）,使用之前需要加上function.funcion_name
+
++ import导入模块的几种方法
+> 1.from module_name import function_name
+2.from module_name import fun_0, fun_1
+3.import module_name
+4.import module_name *    #导入所有函数
+5.import module_name as customize_name #重命名为自己定义的名字
+6.from module_name import function_name as customize_name
+
+## 面向对象
+
+### 1.创建和使用类

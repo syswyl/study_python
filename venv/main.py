@@ -1,4 +1,4 @@
-import first_pra
-
-user = first_pra.person_infor('ss', 'male', location='shuifu', school='yth')
+from first_pra import *
+import first_pra as fu
+user = person_infor('ss', 'male', location='shuifu', school='yth')
 print(user)
