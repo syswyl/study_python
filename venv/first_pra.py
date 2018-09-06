@@ -115,7 +115,3 @@ def person_infor(xm, nn, **other):
         person_resume['key'] = value
 
     return person_resume
-
-
-user = person_infor('ss', 'male', location='shuifu', school='yth')
-print(user)
