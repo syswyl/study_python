@@ -109,3 +109,9 @@
 + 传递任意数量形参并且结合使用位置形参
 > def function(first, second, **other):  #函数实现
 在定义该种类型函数的时候，必须将接受任意数量的形参放在最后，python先匹配位置形参和关键字形参，最后将剩余的实参都收集到最后的一个形中。
+
+### 2.模块学习
+
++ import 导入整个模块
+假设有两个.py文件，一个名字为 main.py，另一个为 function.py，显然在function.py中即为各种函数的具体实现，在main.py中我们只需要使用:
+> import function ，既可以使用function.py中的所有函数（两个文件在同一位置下）
