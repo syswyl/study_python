@@ -52,17 +52,70 @@
 #         print("hello " + key + " your favorite languages are : ")
 #         for lan in favorite_languages[key]:
 #             print(lan.title())
-responses = {}
-active = True
-while active:
-    name = input("what is your name?\n")
-    mountain = input("which mountain would you like to climb?\n")
-    re = input("let other people to answer yes/no  ?\n")
-    responses[name] = mountain
+# responses = {}
+# active = True
+# while active:
+#     name = input("what is your name?\n")
+#     mountain = input("which mountain would you like to climb?\n")
+#     re = input("let other people to answer yes/no  ?\n")
+#     responses[name] = mountain
+#
+#     if re == 'no':
+#         active = 0
+#
+# print(responses)
+# for name in sorted(responses.keys()):       #按照字典序排序
+#     print(name.title())
 
-    if re == 'no':
-        active = 0
 
-print(responses)
-for name in sorted(responses.keys()):       #按照字典序排序
-    print(name.title())
+# def as_print(person_name, name, album=0):
+#     if album == 0:
+#         this_album = {"person": person_name,
+#                       "album_name": name}
+#     else:
+#         this_album = {"person": person_name,
+#                       "album_name": name,
+#                       "album_num": album}
+#
+#     return this_album
+#
+#
+# while True:
+#     print("input 'q' to quit")
+#     p = input("person's name:")
+#     if p == 'q':
+#         break
+#     album_name = input("input album's name:")
+#     num = int(input("input album's number:"))
+#     print("hello  the album's infor is as followed" + str(as_print(p, album, num)))
+
+# def un_printname(unprintnames):
+#     modify = []
+#     for name in unprintnames:
+#         name = name + "the coll"
+#         modify.append(name)
+#
+#     return modify
+#
+#
+# def showname(completednames):
+#     print("the followed have been printed: \n")
+#     for (name, i) in zip(completednames, range(len(completednames))):
+#         print("this is the number" + str(i+1) + " show the window :  " + name)
+#
+#
+# uncompletedname = ['ss', 'xmh', 'scy', 'tht']
+# showname(uncompletedname)
+# showname((un_printname(uncompletedname[:])))
+def person_infor(xm, nn, **other):
+    person_resume = {}
+    person_resume['name'] = xm
+    person_resume['sex'] = nn
+    for (key, value) in other.items():
+        person_resume['key'] = value
+
+    return person_resume
+
+
+user = person_infor('ss', 'male', location='shuifu', school='yth')
+print(user)

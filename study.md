@@ -27,6 +27,7 @@
 > car = ["bmw", "benz", "other"]
 > "bmw" in car  (true) // "dazhong" in car (false)
 + 使用len获取列表长度
++ <font color  = "red">for循环中的递增迭代</font>： for index in range(len(numbers)): 对于数组的索引迭代，需要用到len（）求数组的长度，用range进行索引迭代
 
 ### 3.元组学习使用：
 
@@ -48,7 +49,7 @@
 > delete dictionary_name['key'] 删除
 + 遍历：
 > 使用<font color = "red">item</font>遍历所有键对
-> 使用<font color = "blue">keys</font>遍历所有键 ,用sorted(dictionary_name.keys()),使得按照键入的字典的顺序遍历所有值。
+> 使用<font color = "blue">keys</font>遍历所有键 ,用sorted(dictionary_name.keys()),使得按照键入的字典的顺序遍历所有值。如果遍历时候不带后缀，默认等于遍历keys
 > 使用<font color = "green">value</font>遍历所有值，使用set(dictionary_name.values())剔除列表中的重复项。
 
 ### 2.嵌套：
@@ -82,5 +83,29 @@
 
 ## 函数学习
 
+### 1.参数传递
 
++ 位置实参
+> def animal_name(animal_type, pet_name):
 
+使用时候：animal_name(dog, xiamai)，如果交换顺序在实际中会产生错误。
+
++ 关键字实参
+> def animal_name(animal_type, pet_name):
+
+使用时候：animal_name(animal_type = "dog", pet_name = "xiamai")
+或者可以这样：animal_name(pet_name = "xiaoai", animal_name = "dog")
+
++ 使用默认形参
+> def animal_name(pet_name, animal_name = "dog")
+既可以显式的给函数提供实参，也可使用函数的默认形参
+
+如：animal_name("xiaoai") ，或  animal_name("xiaoai", "cat")
+
++ 传递列表，列表可以是名字，数字或者字典，当然在函数中修改列表之后会改变列表的内容，如果不想修改列表内容，可以使用如下方法：
+> def function(formal_par):  #函数实现
+调用：function(list_name[:]) #向函数传递副本
+
++ 传递任意数量形参并且结合使用位置形参
+> def function(first, second, **other):  #函数实现
+在定义该种类型函数的时候，必须将接受任意数量的形参放在最后，python先匹配位置形参和关键字形参，最后将剩余的实参都收集到最后的一个形参中。
