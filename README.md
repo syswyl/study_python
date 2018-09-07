@@ -1,3 +1,4 @@
 #study_python
-将自己在学习 python途中写的一些基础代码保存，我学习使用的书是《python编程，从入门到实战》
-自己还写了一份markdown的文本记录学习的一些细节和心得
+1. 使用平台 Python 3.6.5 
+2. 参考书籍《python编程，从入门到实战》
+3. pycharm + vscode
