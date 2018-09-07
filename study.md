@@ -1,4 +1,4 @@
-# <center> study python </center>
+# <center>study python</center>
 
 ## list的学习使用
 
@@ -119,14 +119,15 @@
 import function ，既可以使用function.py中的所有函数（两个文件在同一位置下）,使用之前需要加上function.funcion_name
 
 + import导入模块的几种方法
-> 1.from module_name import function_name
-2.from module_name import fun_0, fun_1
-3.import module_name
-4.import module_name *    #导入所有函数
-5.import module_name as customize_name #重命名为自己定义的名字
-6.from module_name import function_name as customize_name
 
-## 面向对象
+1. from module_name import function_name
+2. from module_name import fun_0, fun_1
+3. import module_name
+4. import module_name *  &emsp;   #导入所有函数(不建议)
+5. import module_name as customize_name #重命名为自己定义的名字
+6. from module_name import function_name as customize_name
+
+## 面向对象学习
 
 ### 1.创建和使用类
 
@@ -158,4 +159,15 @@ import function ，既可以使用function.py中的所有函数（两个文件在同一位置下）,使用
 + 重写父类方法
 
 可以重写父类中的方法，只需要将名字与父类中同名，这样子类会父类中的方法，转而调用子类中定义的方法。
-<font color = 'red' size = '30px' > 学习任重而道远</font>
+
+### 3.导入类
+
++ 通过import导入其他模块中的类
+
+假设在car.py中定义了一个名字叫做Car的类，为了使得主要程序中比较简洁，我们主要的表达在main.py中导入car.py即可以
+> 在main.py中，写from car import Car,该语句让python打开模块car，并导入其中的Car类，在main.py中就可以使用了。
++ 导入类总结
+
+1. from module_name import Class
+2. from module_name import Class0, Class1
+3. from module_name import * &emsp; #导入所有类(不建议)
