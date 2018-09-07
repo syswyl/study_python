@@ -115,7 +115,8 @@
 #         person_resume['key'] = value
 #
 #     return person_resume
-class Dog():
+
+class Dog:
     def __init__(self, name, age):
         self.name = name
         self.age = age
@@ -128,11 +129,14 @@ class Dog():
 
 
 class Car:
+    num = 0
+
     def __init__(self, model, name, year):
         self.model = model
         self.name = name
         self.year = year
         self.meter = 10
+        Car.num += 1
 
     def full_information(self):
         fullname = self.model + ' ' + self.name + ' ' + str(self.year)
@@ -148,9 +152,20 @@ class Car:
             print("you can not modify the meter！")
 
 
+class Battery:
+    def __init__(self, battery=80):
+        self.battery = battery
+
+    def describe_battery(self):
+        print("this electric car has battery of " + str(self.battery) + "-kwh")
+
+
 class ElectricCar(Car):
     def __init__(self, model, name, year):
         """"初始化父类的属性"""
         super().__init__(model, name, year)
+        self.battery = Battery()
 
+    def show_num(self):
+        print("now the number of the car is : {:d}".format(Car.num))
 

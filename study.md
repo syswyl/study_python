@@ -150,5 +150,12 @@ import function ，既可以使用function.py中的所有函数（两个文件在同一位置下）,使用
 #子类 :
         class ecar(Car):
             def _init_(self, name,year:
-                    super()._ init _(name,year)'
+                    super()._ init _(name,year)
 ```
+
+> super()是一个函数，使得父类和子类关联起来。让python调用父类的方法_init_(),让子类包含父类的所有属性。
+
++ 重写父类方法
+
+可以重写父类中的方法，只需要将名字与父类中同名，这样子类会父类中的方法，转而调用子类中定义的方法。
+<font color = 'red' size = '30px' > 学习任重而道远</font>
